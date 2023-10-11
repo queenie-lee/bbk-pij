@@ -1,2 +1,2 @@
 # bbk-fic
-Fundamentals of Computing Module at Birkbeck College, University of London
+Programming in Java Module at Birkbeck College, University of London

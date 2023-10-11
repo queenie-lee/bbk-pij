@@ -16,6 +16,28 @@ public class Exercises_d1_7 {
         int num2 = 0;
         int num3 = 0;
 
+/* Code suggested by lecture
+
+        if (num1 > num2 && num1 > num3){
+            if(num2 > num3) {
+                System.out.println(num3 + " " + num2 + " " + num1);
+            } else {
+                System.out.println(num2 + " " + num3 + " " + num1);
+            }
+        } else if (num2 > num1 && num2 > num3) {
+            if (num1 > num3) {
+                System.out.println(num3 + " " + num1 + " " + num2)
+            } else {
+                System.out.println(num1 + " " + num3 + " " + num2)
+            }
+        } else {
+             if (num1 > num2) {
+                System.out.println(num3 + " " + num2 + " " + num1)
+            } else {
+                System.out.println(num3 + " " + num1 + " " + num2)
+            }
+        } 
+*/
         if (a < b) {
             if (a < c) {
                 num1 = a;

@@ -9,14 +9,31 @@ public class Exercises_d3_9 {
         java.util.Scanner scan = new java.util.Scanner(System.in);
         boolean textOutput = true;
         int counter = 0;
+        String word = "";
+        char space = ' ';
 
         System.out.print("Enter some text: ");
-        String word = scan.nextLine();
+        String text = scan.nextLine();
 
-        while (counter < word.length()) {
-            System.out.println(word.charAt(counter));
+        while (counter <= text.length()) {
+            if (counter == text.length() ) {
+                System.out.println(word);
+            } else if (text.charAt(counter) != space) {
+                word += text.charAt(counter);
+            } else {
+                System.out.println(word);
+                word = "";
+            }
             counter++;
         }
+
+        // code to write the prompted text on screen, with each letter on a different line
+        /*
+        while (counter < text.length()) {
+            System.out.println(text.charAt(counter));
+            counter++;
+        }
+        */
 
     }
 }

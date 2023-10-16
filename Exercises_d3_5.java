@@ -34,7 +34,12 @@ public class Exercises_d3_5 {
         point3.y = 33;
 
         System.out.println(point1.x + " " + point1.y + " " + point2.x + " " + point2.y + " " + point3.x + " " + point3.y);
-        
+
+        double calculation12 = Math.sqrt(Math.pow((point1.x - point2.x),2) + Math.pow((point1.y - point2.y),2));
+        double calculation23 = Math.sqrt(Math.pow((point2.x - point3.x),2) + Math.pow((point2.y - point3.y),2));
+        double calculation31 = Math.sqrt(Math.pow((point3.x - point1.x),2) + Math.pow((point3.y - point1.y),2));
+
+        System.out.println(calculation1 + " " + calculation2 + " " + calculation3);
 
         
     }

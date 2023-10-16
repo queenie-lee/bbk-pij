@@ -24,22 +24,26 @@ public class Exercises_d3_5 {
         Point point2 = new Point();
         Point point3 = new Point();
 
-        point1.x = 10;
-        point1.y = 11;
+        System.out.print("Enter the first point's x coordinate: ");
+        point1.x = scan.nextDouble();
+        System.out.print("Enter the first point's y coordinate: ");
+        point1.y = scan.nextDouble();
 
-        point2.x = 2;
-        point2.y = 22;
+        System.out.print("Enter the second point's x coordinate: ");
+        point2.x = scan.nextDouble();
+        System.out.print("Enter the second point's y coordinate: ");
+        point2.y = scan.nextDouble();
 
-        point3.x = 31;
-        point3.y = 33;
-
-        System.out.println(point1.x + " " + point1.y + " " + point2.x + " " + point2.y + " " + point3.x + " " + point3.y);
+        System.out.print("Enter the third point's x coordinate: ");
+        point3.x = scan.nextDouble();
+        System.out.print("Enter the third point's y coordinate: ");
+        point3.y = scan.nextDouble();
 
         double distance12 = Math.sqrt(Math.pow((point1.x - point2.x),2) + Math.pow((point1.y - point2.y),2));
         double distance23 = Math.sqrt(Math.pow((point2.x - point3.x),2) + Math.pow((point2.y - point3.y),2));
         double distance31 = Math.sqrt(Math.pow((point3.x - point1.x),2) + Math.pow((point3.y - point1.y),2));
 
-        System.out.println(distance12 + " " + distance23 + " " + distance31);
+        /* System.out.println(distance12 + " " + distance23 + " " + distance31); */
 
         if (distance12 < distance23 && distance12 < distance31) {
             System.out.println("Coordinates (" + point1.x + "," + point1.y + ") and (" + point2.x + "," + point2.y + ") are closest to each other.");

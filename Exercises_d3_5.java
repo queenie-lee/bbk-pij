@@ -24,23 +24,32 @@ public class Exercises_d3_5 {
         Point point2 = new Point();
         Point point3 = new Point();
 
-        point1.x = 1;
+        point1.x = 10;
         point1.y = 11;
 
         point2.x = 2;
         point2.y = 22;
 
-        point3.x = 3;
+        point3.x = 31;
         point3.y = 33;
 
         System.out.println(point1.x + " " + point1.y + " " + point2.x + " " + point2.y + " " + point3.x + " " + point3.y);
 
-        double calculation12 = Math.sqrt(Math.pow((point1.x - point2.x),2) + Math.pow((point1.y - point2.y),2));
-        double calculation23 = Math.sqrt(Math.pow((point2.x - point3.x),2) + Math.pow((point2.y - point3.y),2));
-        double calculation31 = Math.sqrt(Math.pow((point3.x - point1.x),2) + Math.pow((point3.y - point1.y),2));
+        double distance12 = Math.sqrt(Math.pow((point1.x - point2.x),2) + Math.pow((point1.y - point2.y),2));
+        double distance23 = Math.sqrt(Math.pow((point2.x - point3.x),2) + Math.pow((point2.y - point3.y),2));
+        double distance31 = Math.sqrt(Math.pow((point3.x - point1.x),2) + Math.pow((point3.y - point1.y),2));
 
-        System.out.println(calculation1 + " " + calculation2 + " " + calculation3);
+        System.out.println(distance12 + " " + distance23 + " " + distance31);
 
+        if (distance12 < distance23 && distance12 < distance31) {
+            System.out.println("Coordinates (" + point1.x + "," + point1.y + ") and (" + point2.x + "," + point2.y + ") are closest to each other.");
+        } else if (distance23 < distance12 && distance23 < distance31) {
+            System.out.println("Coordinates (" + point2.x + "," + point2.y + ") and (" + point3.x + "," + point3.y + ") are closest to each other.");
+        } else if (distance31 < distance12 && distance31 < distance23) {
+            System.out.println("Coordinates (" + point3.x + "," + point3.y + ") and (" + point1.x + "," + point1.y + ") are closest to each other.");
+        } else {
+            System.out.println("At least two of these coordinates are equally close to each other.");
+        }
         
     }
 }

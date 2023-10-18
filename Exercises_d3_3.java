@@ -9,9 +9,8 @@ Double.parseDouble() method to parse real numbers. Similarly, class java.util.Sc
 public class Exercises_d3_3 {
     public static void main(String[] args) {
         java.util.Scanner scan = new java.util.Scanner(System.in);
-        double num1 = 0;
-        double num2 = 0;
-        double equals = 0;
+        double num1, num2;
+        Double result = null;
         boolean calculation = true;
 
         System.out.print("Enter your first number: ");
@@ -23,44 +22,48 @@ public class Exercises_d3_3 {
 
 
         System.out.println("Please choose an option:");
-        System.out.println("For ’Addition’, please enter 1");
-        System.out.println("For ’Subtraction’, please enter 2");
-        System.out.println("For ’Multiplication’, please enter 3");
-        System.out.println("For ’Division’, please enter 4");
-        int choice = scan.nextInt();
+        System.out.println("For ’Addition’, please enter '+'");
+        System.out.println("For ’Subtraction’, please enter '-'");
+        System.out.println("For ’Multiplication’, please enter '*'");
+        System.out.println("For ’Division’, please enter '/'");
+        String choice = scan.next(); // previously used scan.nextInt(), better to use scan.next()
 
         switch (choice) {
         
-        case 1:
-        equals = num1 + num2;
-        System.out.println(num1 + " + " + num2 + " = " + equals);
+        case "+":
+        result = num1 + num2;
+        System.out.println(num1 + " + " + num2 + " = " + result);
         calculation = false;
         break;
    
-        case 2:
-        equals = num1 - num2;
-        System.out.println(num1 + " - " + num2 + " = " + equals);
+        case "-":
+        result = num1 - num2;
+        System.out.println(num1 + " - " + num2 + " = " + result);
         calculation = false;
         break;
 
-        case 3:
-        equals = num1 * num2;
-        System.out.println(num1 + " * " + num2 + " = " + equals);
+        case "*":
+        result = num1 * num2;
+        System.out.println(num1 + " * " + num2 + " = " + result);
         calculation = false;
         break;
 
-        case 4:
-        equals = num1 / num2;
-        System.out.println(num1 + " / " + num2 + " = " + equals);
+        case "/":
+        result = num1 / num2;
+        System.out.println(num1 + " / " + num2 + " = " + result);
         calculation = false;
         break;
 
-        default:
-        // invalid option
+        default: // invalid option
         System.out.println("That is not a valid option, please try again");
         }
 
+
         }
+
+        if (result!=null){
+          System.out.println("The result is: " + result);
         }
+     }
         
-    }
+ }

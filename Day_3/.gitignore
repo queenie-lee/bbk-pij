@@ -1,0 +1,3 @@
+# ignore all Java compiled files
+*.class
+/d3_Exercise_A.class
